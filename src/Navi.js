@@ -9,7 +9,7 @@ import {
   NavLink,
 } from "reactstrap";
 import CartSummary from "./CartSummary";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function Navi({ cart, removeFromCart }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,9 +23,14 @@ function Navi({ cart, removeFromCart }) {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <Link to="form1">
-                Form Demo 1
-              </Link>
+              <NavLink>
+                <Link to="form1">Form Demo 1</Link>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>
+                <Link to="form2">Form Demo 2</Link>
+              </NavLink>
             </NavItem>
           </Nav>
           <Nav navbar>
